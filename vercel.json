@@ -1,0 +1,9 @@
+{
+    "rewrites": [
+      {
+        "source": "/api/(.*)",
+        "destination": "https://stockflow-api.onrender.com/api/$1"
+      }
+    ]
+  }
+  
