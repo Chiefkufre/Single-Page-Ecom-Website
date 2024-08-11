@@ -7,7 +7,7 @@ import Modal from "../components/ConfirmOrderModal";
 import Spinner from "../components/Spinner";
 import { Product } from "../interfaces/ProductModel";
 const HomePage = () => {
-  const { page, setPage } = usePaginationStore();
+  const { page } = usePaginationStore();
 
   
   const { isSuccess, isLoading, isError, data, error } = useQuery({
@@ -15,11 +15,11 @@ const HomePage = () => {
     queryFn: () => fetchAllItems(page),
   });
 
-  function handlePagination(pageNumber: number) {
-    if (pageNumber > 0 && pageNumber < 4) {
-      setPage(pageNumber);
-    }
-  }
+  // function handlePagination(pageNumber: number) {
+  //   if (pageNumber > 0 && pageNumber < 4) {
+  //     setPage(pageNumber);
+  //   }
+  // }
   return (
     <>
       {isLoading && <Spinner state={!isLoading} />}
