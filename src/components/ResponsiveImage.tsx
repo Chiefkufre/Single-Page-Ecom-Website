@@ -32,7 +32,7 @@ const ResponsiveImage:  React.FC<ResponsiveImageProps> = ({ source, className })
 
   return (
     <img
-      src={imageUrl ? `src/assets/images/${imageUrl}` : ""}
+      src={imageUrl ? `/images/${imageUrl}` : ""}
       alt="Not found"
       className={`${className}`}
     />
